@@ -5,10 +5,7 @@ body {
     font-family: "Afacad", sans-serif;
     font-optical-sizing: auto;
     font-style: normal;
-}
-
-body, input, textarea {
-    color: white;
+    font-size: 100%;
 }
 
 * {
@@ -31,6 +28,18 @@ body, input, textarea {
 body {
     display: block;
     margin: 8px;
+}
+
+h2 {
+    font-family: "Afacad", sans-serif;
+    font-size: 96px;
+    font-weight: 700px;
+    font-style: normal;
+}
+
+.banner {
+    display: flex;
+    justify-content: center;
 }
 
 .banner, h1 {
@@ -61,10 +70,6 @@ body {
     margin-right: 20%;
     display: flex;
     flex-wrap: wrap;
-    font-family: "Afacad", sans-serif;
-    font-size: 96px;
-    font-weight: 700px;
-    font-style: normal;
 }
 
 .summary {
@@ -81,7 +86,7 @@ body {
     flex-wrap: wrap;
 }
 
-.preamble {
+/*.preamble {
     display: block;
     background-color: blue;
     height: 500px;
@@ -91,20 +96,39 @@ body {
     flex-wrap: wrap;
 }
 
-h3:first-child {
-    background-color: yellow;
-    font-family: "Afacad", sans-serif;
-    font-size: 48px;
-    font-weight: 700px;
-    font-style: normal;
-}
-
 .preamble, p {
     font-family: "Afacad", sans-serif;
     font-size: 24px;
     font-weight: 400px;
     font-style: normal;
     padding-top: 3%;
+}*/
+
+section.intro div.preamble {
+    background: blue;
+    color: white;
+    margin-left: -30%;
+    padding: 5% 5% 5% 30%;
+    position: relative;
+    display: block;
+    unicode-bidi: isolate;
+}
+
+.preamble {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    height: 500px;
+    width: 100%;
+}
+
+
+h3:first-child {
+    background-color: yellow;
+    font-family: "Afacad", sans-serif;
+    font-size: 48px;
+    font-weight: 700px;
+    font-style: normal;
 }
 
 .design-selection{
@@ -138,9 +162,173 @@ h3:first-child {
     text-decoration: none;
 }
 
+aside {
+    display: block;
+    unicode-bidi: isolate;
+}
+
+aside.sidebar {
+    background: green;
+    color: white;
+    padding: 5%;
+    position: absolute;
+    right: 0;
+    top: 2.5%;
+    width: 32.75%;
+}
+
 aside.sidebar ul li {
     color: white;
     list-style: none;
     margin: 0;
     padding: 0 0 0.825em 0;
+}
+
+.explanation {
+    background-color: blue;
+    color: white;
+    width: 100%;
+    height: 720px;
+    border-radius: 465px;
+    transform:translate(-50%,0);
+}
+
+/*.explanation, h3, p {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: flex-start;
+}*/
+
+.participation {
+    background-color: red;
+    color: white;
+    width: 100%;
+    height: 720px;
+    border-radius: 465px;
+    transform:translate(50%,0);
+}
+
+.participation, h3, p {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    /*padding-left: 3%: */
+}
+
+.benefits {
+    background-color: green;
+    color: white;
+    width: 100%;
+    height: 720px;
+    border-radius: 465px;
+    transform:translate(-50%,0);
+}
+
+/*.benefits, h3, p {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: flex-start;
+} */
+
+.requirements {
+    background-color: white;
+    color: black;
+    width: 100%;
+    height: 720px;
+    border-radius: 465px;
+    transform:translate(50%,0);
+}
+
+.requirements, h3, p {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+}
+
+.viewall {
+    color: white;
+    font-family: "Afacad", sans-serif;
+    font-size: 96px;
+    font-weight: 700px;
+    font-style: normal;
+}
+
+.zen-resources {
+    display: block;
+    background-color: aqua;
+    height: 500px;
+    width: 600px;
+    padding: 5%;
+    display: flex;
+    flex-wrap: wrap;
+    text-align: center;
+    justify-content: center;
+}
+
+.zen-resources, li {
+    color: black;
+    font-family: "Afacad", sans-serif;
+    font-size: 32px;
+    font-weight: 700px;
+    font-style: normal;
+    text-decoration: none;
+}
+
+.footer {
+    color: black;
+    font-family: "Afacad", sans-serif;
+    font-size: 48px;
+    font-weight: 700px;
+    font-style: normal;
+}
+
+.zen-validate-html {
+    background-color:white;
+    height: 190px;
+    width: 190px;
+    border-radius: 50%;
+    display: inline-block;
+}
+
+.zen-validate-css {
+    background-color:white;
+    height: 190px;
+    width: 190px;
+    border-radius: 50%;
+    display: inline-block;
+}
+
+.zen-license {
+    background-color:white;
+    height: 190px;
+    width: 190px;
+    border-radius: 50%;
+    display: inline-block;
+}
+
+.zen-accessibility {
+    background-color:white;
+    height: 190px;
+    width: 190px;
+    border-radius: 50%;
+    display: inline-block;
+}
+
+.zen-github {
+    background-color:white;
+    height: 190px;
+    width: 190px;
+    border-radius: 50%;
+    display: inline-block;
+}
+
+.zen-validate-html, .zen-validate-css, .zen-license, .zen-accessibility, .zen-github {
+    color: black;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
