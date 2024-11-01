@@ -44,7 +44,7 @@ h2 {
 
 .banner, h1 {
     color: white;
-    background-color:rgba(0, 0, 225, 0.3);
+    background-color:rgba(0, 0, 225, 80%);
     height: 475px;
     width: 475px;
     border-radius: 50%;
@@ -132,7 +132,7 @@ h3:first-child {
 }
 
 .design-selection{
-    background-color: rgba(2, 255, 2, 0.736);
+    background-color: rgba(2, 255, 2, 80%);
     height: 650px;
     width: 780px;
     padding-left: 3%;
@@ -286,7 +286,7 @@ aside.sidebar ul li {
     font-style: normal;
 }
 
-.zen-validate-html {
+/*.zen-validate-html {
     background-color:white;
     height: 190px;
     width: 190px;
@@ -324,6 +324,34 @@ aside.sidebar ul li {
     width: 190px;
     border-radius: 50%;
     display: inline-block;
+}*/
+
+.footer {
+    grid-column: 5;
+    display: flex;
+    /*flex-direction: column;*/
+    flex-basis: 100%;
+    flex: 1;
+    text-align: center;
+    display: grid;
+    flex-direction: row;
+    flex-wrap: wrap;
+    width: 100%;
+    gap: 3%;
+    justify-content: center;
+}
+
+.zen-validate-html {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: white;
+    height: 190px;
+    width: 190px;
+    border-radius: 50%;
+    border: none;
+    cursor: pointer;
+    z-index: 10;
 }
 
 .zen-validate-html, .zen-validate-css, .zen-license, .zen-accessibility, .zen-github {
@@ -332,3 +360,19 @@ aside.sidebar ul li {
     justify-content: space-between;
     align-items: center;
 }
+
+.zen-validate-html:hover {
+    background-color:rgba(0, 0, 225, 80%);
+    color: white;
+}
+
+.zen-validate-css:hover {
+    background-color:rgba(225, 0, 0, 80%);
+    color: white;
+}
+
+.zen-license {
+    background-color:rgba(0, 225, 0, 80%);
+    color: white;
+}
+
