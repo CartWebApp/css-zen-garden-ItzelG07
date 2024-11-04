@@ -91,7 +91,7 @@ h1 {
     content: "\00A0";
   } 
 
-  [role="banner"] {
+[role="banner"] {
     order: 1;
   }
 
@@ -244,10 +244,9 @@ h1 {
 }
 
 .preamble {
-    display: block;
     color: white;
     background-color: blue;
-    height: 650px;
+    height: 600px;
     width: 60%;
     padding: 5%;
     display: flex;
@@ -255,7 +254,7 @@ h1 {
     flex-wrap: wrap;
 }
 
-.preamble, h3 {
+.preamble h3 {
     text-decoration: none;
     color: white;
     font-family: "Afacad", sans-serif;
@@ -270,7 +269,7 @@ h1 {
     font-size: 24px;
     font-weight: 400px;
     font-style: normal;
-    padding-top: 3%;
+    padding-top: 0;
 }
 
 [title~="Document"] {
@@ -288,19 +287,240 @@ h1 {
 .zen-resources {
     display: block;
     background-color: aqua;
-    height: 650px;
+    height: 600px;
     width: 40%;
     gap: 0;
     padding: 5%;
+    text-align: center;
+    flex-wrap: wrap;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    align-self: flex-end;
+    transform: translate(0,-600px);
+}
+
+.zen-resources h3 {
+    color: black;
+    font-family: "Afacad", sans-serif;
+    font-size: 48px;
+    font-weight: 700px;
+    font-style: normal;
+    text-align: center;
+}
+
+.zen-resources a {
+    color: black;
+    font-size: 32px;
+    font-weight: 700px;
+    font-style: normal;
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+}
+
+[title~="Frequently"] {
+    text-decoration: none;
+}
+
+.design-selection {
+    background-color: rgba(2, 255, 2, 80%);
+    height: 800px;
+    width: 40%;
+    padding: 3%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    align-self: flex-end;
+    transform: translate(0,-1051px);
+}
+
+.design-selection h3 {
+    color: white;
+    font-family: "Afacad", sans-serif;
+    font-size: 48px;
+    font-weight: 700px;
+    font-style: normal;
+    text-align: center;
+}
+
+.design-selection, ul, li {
+    color: white;
+    font-family: "Afacad", sans-serif;
+    font-size: 24px;
+    font-weight: 400px;
+    font-style: normal;
+    margin-top: 5%;
+    list-style: none;
+    text-align: left;
+}
+
+.design-name {
+    color: white;
+    font-size: 32px;
+    font-weight: 700px;
+    text-decoration: none;
+}
+
+.designer-name {
+    color: white;
+    font-size: 24px;
+    font-weight: 400px;
+    font-style: normal;
+    text-decoration: none;
+    text-decoration: none;
+}
+
+[role="navigation"] {
     text-align: center;
     display: flex;
     justify-content: center;
     align-items: center;
     align-self: center;
+  }
+
+.viewall a {
+    color: white;
+    font-family: "Afacad", sans-serif;
+    font-size: 96px;
+    font-weight: 700px;
+    font-style: normal;
+    width: 60%;
+    text-align: center;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    align-self: flex-start;
+    transform: translate(-55%,-500px);
+}
+
+a:link {
+    text-decoration: none;
+    list-style: none;
+}
+
+.next a {
+    background-color: white;
+    color:transparent;
+    font-size: 48px;
+    font-weight: 700px;
+}
+
+.explanation {
+    color: white;
+    background-color: blue;
+    border-radius: 0% 50% 50% 0%;
+    height: 800px;
+    width: 50%;
+    padding: 5%;
+    display: flex;
+    align-items: center;
     flex-wrap: wrap;
 }
 
-.zen-resources, h3 {
+.explanation h3 {
+    text-decoration: none;
+    color: white;
+    font-family: "Afacad", sans-serif;
+    font-size: 48px;
+    font-weight: 700px;
+    font-style: normal;
+}
+
+.explanation p {
+    color: white;
+    font-family: "Afacad", sans-serif;
+    font-size: 24px;
+    font-weight: 400px;
+    font-style: normal;
+    padding-top: 0;
+    padding-right: 15%;
+}
+
+.participation {
+    color: white;
+    background-color: red;
+    border-radius: 50% 0% 0% 50%;
+    height: 800px;
+    width: 50%;
+    padding: 5%;
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-end;
+    align-self: flex-end;
+    text-align: right;
+    flex-wrap: wrap;
+}
+
+.participation h3 {
+    text-decoration: none;
+    color: white;
+    font-family: "Afacad", sans-serif;
+    font-size: 48px;
+    font-weight: 700px;
+    font-style: normal;
+}
+
+.participation p {
+    color: white;
+    font-family: "Afacad", sans-serif;
+    font-size: 24px;
+    font-weight: 400px;
+    font-style: normal;
+    padding-top: 0;
+    padding-left: 15%;
+}
+
+.benefits {
+    color: white;
+    background-color: green;
+    border-radius: 0% 50% 50% 0%;
+    height: 800px;
+    width: 50%;
+    padding: 5%;
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.benefits h3 {
+    text-decoration: none;
+    color: white;
+    font-family: "Afacad", sans-serif;
+    font-size: 48px;
+    font-weight: 700px;
+    font-style: normal;
+}
+
+.benefits p {
+    color: white;
+    font-family: "Afacad", sans-serif;
+    font-size: 24px;
+    font-weight: 400px;
+    font-style: normal;
+    padding-right: 15%;
+}
+
+.requirements {
+    color: black;
+    background-color: white;
+    border-radius: 50% 0% 0% 50%;
+    height: 800px;
+    width: 50%;
+    padding: 5%;
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-end;
+    align-self: flex-end;
+    text-align: right;
+    flex-wrap: wrap;
+}
+
+.requirements h3 {
+    text-decoration: none;
     color: black;
     font-family: "Afacad", sans-serif;
     font-size: 48px;
@@ -308,46 +528,24 @@ h1 {
     font-style: normal;
 }
 
-.zen-resources, ul {
-    text-decoration: none;
+.requirements p {
     color: black;
-    font-family: "Afacad", sans-serif;
-    font-size: 32px;
-    font-weight: 700px;
-    font-style: normal;
-}
-
-.design-selection{
-    background-color: rgba(2, 255, 2, 80%);
-    height: 650px;
-    width: 780px;
-    padding-left: 3%;
-    padding-right: 3%;
-    padding-top: 5%;
-    transform:translate(100%,0);
-}
-
-.design-selection, ul, li {
     font-family: "Afacad", sans-serif;
     font-size: 24px;
     font-weight: 400px;
     font-style: normal;
-    margin-top: 5%;
+    padding-top: 0;
+    padding-left: 15%;
 }
 
-.design-name{
-    color: white;
-    font-size: 32px;
-    font-weight: 700px;
-    font-style: normal;
-    text-decoration: none;
-}
-
-.designer-name {
-    color: white;
-    text-decoration: none;
-}
-
+[role="article"] {
+    grid-column: 2;
+    display: flex;
+    flex-direction: column;
+    flex-basis: 100%;
+    flex: 1;
+    display: grid;
+  }
 
 /*section.intro div.preamble {
     background: blue;
