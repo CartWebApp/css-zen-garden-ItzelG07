@@ -1,48 +1,48 @@
 /* Empty file for template. Remember to edit only this file and not the HTML file */
 
-body {
-    background: black;
+/*.afacad-<uniquifier> {
     font-family: "Afacad", sans-serif;
     font-optical-sizing: auto;
+    font-weight: <weight>;
     font-style: normal;
-    font-size: 100%;
+  }*/
+
+body {
+    background: black;
+    display: block;
+    font-family: "Afacad", sans-serif;
+    font-style: normal;
+    margin: 0;
+    padding: 0;
 }
 
 * {
     -moz-box-sizing: border-box;
     -webkit-box-sizing: border-box;
     box-sizing: border-box;
+    /*margin: 0;
+    padding: 0;*/
     font-family: "Afacad", sans-serif;
-    font-optical-sizing: auto;
     font-style: normal;
 }
 
-* {
-    margin: 0;
-    padding: 0;
-    font-family: "Afacad", sans-serif;
-    font-optical-sizing: auto;
-    font-style: normal;
-}
 
-body {
-    display: block;
-    margin: 8px;
-}
 
-h2 {
+/*h2 {
     font-family: "Afacad", sans-serif;
     font-size: 96px;
     font-weight: 700px;
     font-style: normal;
+    color: white;
 }
 
 .banner {
     display: flex;
     justify-content: center;
-}
+    align-items: center;
+}*/
 
-.banner, h1 {
+h1 {
     color: white;
     background-color:rgba(0, 0, 225, 80%);
     height: 475px;
@@ -50,32 +50,141 @@ h2 {
     border-radius: 50%;
     display: inline-block;
     display: flex;
-    align-self: flex-end;
+    align-self: center;
     align-items: flex-end;
     justify-content: center;
-    padding-bottom: 150px;
+    padding-bottom: 130px;
     font-family: "Afacad", sans-serif;
     font-size: 48px;
     font-weight: 700px;
     font-style: normal;
-    transform:translate(50%,-50%);
+    position: absolute;
+    left: 50vw;
+    transform: translate(-50%, -75%);
 }
 
-.intro h2 {
-    text-align: center;
-    padding-top: 0;
-    margin-top: 0;
-    margin-bottom: 10%;
-    margin-left: 20%;
-    margin-right: 20%;
+ h2 {
+    font-family: "Afacad", sans-serif;
+    font-size: 96px;
+    font-weight: 700px;
+    font-style: normal;
+    color: white;
     display: flex;
     flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    align-self: center;
+    text-align: center;
+    width: 100%;
+    padding-top: 20%;
 }
 
-.summary {
-    background-color: white;
-    color: black;
+[title~="Cascading"] {
+    text-decoration: none;
+}
+
+[title~="Cascading"]::before {
+    content: "\00A0";
+  } 
+
+[title~="Cascading"]::after {
+    content: "\00A0";
+  } 
+
+  [role="banner"] {
+    order: 1;
+  }
+
+[role="banner"] h1 {
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+}
+
+[role="banner"] h2::before {
+    content: "";
+    display: inline-block;
+    width: 100%;
+    height: 90px;
+    background-image: url('images/Group\ 21.png');
+    background-position: center;
+    background-size: cover;
+    margin-right: 8px;
+    vertical-align: middle;
+    transform: scale(0.95);
+    margin-bottom: 8%;
+    animation: fadeInOut 4s infinite;
+}
+
+@keyframes fadeInOut {
+    0% {
+        background-image: url('images/Group\ 21.png');
+        opacity: 1; 
+    }
+    50% {
+        background-image: url('images/Group\ 21.png');
+        -webkit-filter: invert(100%);
+        filter: invert(100%);
+        opacity: 1;
+    }
+    100% {
+        background-image: url('images/Group\ 21.png');
+        opacity: 1;
+    }
+}
+
+[role="banner"] h2::after {
+    content: "";
+    display: inline-block;
+    width: 100%;
+    height: 90px;
+    background-image: url('images/Group\ 21\ \(1\).png');
+    background-position: center;
+    background-size: cover;
+    margin-right: 8px;
+    vertical-align: middle;
+    transform: scale(0.95);
+    margin-top: 8%;
+    animation: fadeInOut2 4s infinite;
+
+}
+
+@keyframes fadeInOut2 {
+    0% {
+        filter: none;
+    }
+    50% {
+        -webkit-filter: invert(100%);
+        filter: invert(100%);
+    }
+    100% {
+        filter: none;
+    }
+}
+
+/*.summary::before {
+    content: "";
+    background-image: url('Images/Blue-Circle.png');
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+    position: absolute;
+    height: 151px;
+    width: 151px;
+    top: 50%; 
+    left: 50vw;
+    transform: scale(1);
+    transform: translate(-50%, 0);
+    z-index: -1;
+}*/
+
+#zen-summary {
+    background-image: url('Images/Blue-Circle.png');
+    position: relative;
+    overflow: hidden;
+    color: transparent;
     height: 684px;
+    width: auto;
     font-size: 48px;
     display: flex;
     align-items: center;
@@ -84,27 +193,163 @@ h2 {
     padding-left: 10%;
     padding-right: 10%;
     flex-wrap: wrap;
+    background-size: cover;
+    background-position: center;
+    transform: scale(.2);
+    order: 2;
 }
 
-/*.preamble {
+.summary p {
+    position: absolute; 
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    display: none;
+    text-align: center;
+}
+
+.page-wrapper {
+    display: flex;
+    flex-direction: column;
+}
+
+#zen-intro {
+    order: 1;
+}
+
+.sidebar {
+    order: 2;
+}
+
+#zen-supporting {
+    order: 3;
+}
+
+.wrapper {
+    display: flex;
+    flex-direction: column;
+}
+
+#zen-resources {
+    order: 1;
+}
+
+#design-archives {
+    order: 2;
+}
+
+#design-selection {
+    order: 3;
+}
+
+.preamble {
     display: block;
+    color: white;
     background-color: blue;
-    height: 500px;
-    width: 840px;
+    height: 650px;
+    width: 60%;
     padding: 5%;
     display: flex;
+    align-items: center;
     flex-wrap: wrap;
 }
 
+.preamble, h3 {
+    text-decoration: none;
+    color: white;
+    font-family: "Afacad", sans-serif;
+    font-size: 48px;
+    font-weight: 700px;
+    font-style: normal;
+}
+
 .preamble, p {
+    color: white;
     font-family: "Afacad", sans-serif;
     font-size: 24px;
     font-weight: 400px;
     font-style: normal;
     padding-top: 3%;
-}*/
+}
 
-section.intro div.preamble {
+[title~="Document"] {
+    text-decoration: none;
+}
+
+[title~="World"] {
+    text-decoration: none;
+}
+
+[title~="Web"] {
+    text-decoration: none;
+}
+
+.zen-resources {
+    display: block;
+    background-color: aqua;
+    height: 650px;
+    width: 40%;
+    gap: 0;
+    padding: 5%;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    align-self: center;
+    flex-wrap: wrap;
+}
+
+.zen-resources, h3 {
+    color: black;
+    font-family: "Afacad", sans-serif;
+    font-size: 48px;
+    font-weight: 700px;
+    font-style: normal;
+}
+
+.zen-resources, ul {
+    text-decoration: none;
+    color: black;
+    font-family: "Afacad", sans-serif;
+    font-size: 32px;
+    font-weight: 700px;
+    font-style: normal;
+}
+
+.design-selection{
+    background-color: rgba(2, 255, 2, 80%);
+    height: 650px;
+    width: 780px;
+    padding-left: 3%;
+    padding-right: 3%;
+    padding-top: 5%;
+    transform:translate(100%,0);
+}
+
+.design-selection, ul, li {
+    font-family: "Afacad", sans-serif;
+    font-size: 24px;
+    font-weight: 400px;
+    font-style: normal;
+    margin-top: 5%;
+}
+
+.design-name{
+    color: white;
+    font-size: 32px;
+    font-weight: 700px;
+    font-style: normal;
+    text-decoration: none;
+}
+
+.designer-name {
+    color: white;
+    text-decoration: none;
+}
+
+
+/*section.intro div.preamble {
     background: blue;
     color: white;
     margin-left: -30%;
@@ -162,12 +407,12 @@ h3:first-child {
     text-decoration: none;
 }
 
-aside {
+/*aside {
     display: block;
     unicode-bidi: isolate;
-}
+}*/
 
-aside.sidebar {
+/*aside.sidebar {
     background: green;
     color: white;
     padding: 5%;
@@ -175,9 +420,9 @@ aside.sidebar {
     right: 0;
     top: 2.5%;
     width: 32.75%;
-}
+}*/
 
-aside.sidebar ul li {
+/*aside.sidebar ul li {
     color: white;
     list-style: none;
     margin: 0;
@@ -200,7 +445,7 @@ aside.sidebar ul li {
     align-items: flex-start;
 }*/
 
-.participation {
+/*.participation {
     background-color: red;
     color: white;
     width: 100%;
@@ -214,7 +459,7 @@ aside.sidebar ul li {
     flex-direction: column;
     justify-content: flex-start;
     align-items: flex-start;
-    /*padding-left: 3%: */
+    /*padding-left: 3%: 
 }
 
 .benefits {
@@ -224,7 +469,7 @@ aside.sidebar ul li {
     height: 720px;
     border-radius: 465px;
     transform:translate(-50%,0);
-}
+} */
 
 /*.benefits, h3, p {
     display: flex;
@@ -233,7 +478,7 @@ aside.sidebar ul li {
     align-items: flex-start;
 } */
 
-.requirements {
+/*.requirements {
     background-color: white;
     color: black;
     width: 100%;
@@ -284,7 +529,7 @@ aside.sidebar ul li {
     font-size: 48px;
     font-weight: 700px;
     font-style: normal;
-}
+} */
 
 /*.zen-validate-html {
     background-color:white;
@@ -326,10 +571,10 @@ aside.sidebar ul li {
     display: inline-block;
 }*/
 
-.footer {
+/*.footer {
     grid-column: 5;
     display: flex;
-    /*flex-direction: column;*/
+    /*flex-direction: column;
     flex-basis: 100%;
     flex: 1;
     text-align: center;
@@ -374,5 +619,5 @@ aside.sidebar ul li {
 .zen-license {
     background-color:rgba(0, 225, 0, 80%);
     color: white;
-}
+} */
 
